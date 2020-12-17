@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <title>Full Page Slider</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Products</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="imgBx">
+            <img src="img1.jpg" alt="Imagem1" class="active">
+            <img src="img2.jpg" alt="Imagem2">
+            <img src="img3.jpg" alt="Imagem3">
+            <img src="img4.jpg" alt="Imagem4">
+        </div>
+        <div class="contentBx">
+            <div class="active">
+                <h2>Slide Text One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Two</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Three</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Four</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">Details</a>
+            </div>
+        </div>
+        <!-- /* Comentar os codigos abaixo dessa linha para deixar os botões um de cada lado da tela**/ -->
+        <ul class="controls">
+            <li onclick="prevSlide(); prevTextSlide()"></li>
+            <li onclick="nextSlide(); nextTextSlide();"></li>
+        </ul>
+        <!-- /* Comentar os codigos acima dessa linha para deixar os botões um de cada lado da tela**/ -->
+
+        <!-- /* Retirar comentario dos codigos abaixo dessa linha para deixar os botões um de cada lado da tela**/ 
+        <div class="controls">
+            <ul class="prev">
+                <li onclick="prevSlide(); prevTextSlide()"></li>
+            </ul>
+            <ul class="next">
+                <li onclick="nextSlide(); nextTextSlide();"></li>
+            </ul>
+        </div> -->
+    </section>
+    <script>
+        const imgBx = document.querySelector('.imgBx');
+        const slides = imgBx.getElementsByTagName('img');
+        let i = 0;
+
+        function nextSlide(){
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
+        }
+
+        function prevSlide(){
+            slides[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slides.length;
+            slides[i].classList.add('active');
+        }
+
+        const contentBx = document.querySelector('.contentBx');
+        const slidesText = contentBx.getElementsByTagName('div');
+        let j = 0;
+
+        function nextTextSlide(){
+            slidesText[j].classList.remove('active');
+            j = (j + 1) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+
+        function prevTextSlide(){
+            slidesText[j].classList.remove('active');
+            j = (j - 1 + slidesText.length) % slidesText.length;
+            slidesText[j].classList.add('active');
+        }
+    </script>
+</body>
+</html>

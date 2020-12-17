@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card - Border Effects</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Service One</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur reprehenderit iusto, illum alias quis itaque perferendis est.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Service Two</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur reprehenderit iusto, illum alias quis itaque perferendis est.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Service Three</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur reprehenderit iusto, illum alias quis itaque perferendis est.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>04</h2>
+                <h3>Service Four</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur reprehenderit iusto, illum alias quis itaque perferendis est.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>05</h2>
+                <h3>Service Five</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur reprehenderit iusto, illum alias quis itaque perferendis est.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const usuarios = [{
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        }, {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }];
+
+        function user(usuarios) {
+
+            for (i in usuarios) {
+                console.log(`O ${usuarios[i].nome} possui as habilidades: ${usuarios[i].habilidades.join(', ')} `);
+            }
+
+
+        }
+
+        user(usuarios)
+    </script>
+</body>
+
+</html>
